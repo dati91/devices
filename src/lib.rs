@@ -4,6 +4,7 @@
 
 #[cfg(all(target_os = "linux", feature = "bluetooth"))]
 extern crate blurz;
+#[cfg(all(target_os = "android", feature = "bluetooth"))]
+extern crate blurdroid;
 
 pub mod bluetooth;
-

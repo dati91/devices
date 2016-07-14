@@ -5,7 +5,10 @@ authors = ["The Servo Project Developers"]
 
 [features]
 default = ["bluetooth"]
-bluetooth = ["blurz"]
+bluetooth = ["blurz", "blurdroid"]
 
 [target.'cfg(target_os = "linux")'.dependencies]
 blurz = { version = "0.1.7", optional = true }
+
+[target.'cfg(target_os = "android")'.dependencies]
+blurdroid = { git = "https://github.com/dati91/blurdroid.git", branch = "refactor", optional = true }
