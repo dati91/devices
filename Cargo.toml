@@ -6,9 +6,13 @@ authors = ["The Servo Project Developers"]
 [features]
 default = ["bluetooth"]
 bluetooth = ["blurz", "blurdroid"]
+bluetooth-test = ["blurmock"]
 
 [target.'cfg(target_os = "linux")'.dependencies]
 blurz = { version = "0.1.8", optional = true }
 
 [target.'cfg(target_os = "android")'.dependencies]
 blurdroid = { version = "0.1.0", optional = true }
+
+[dependencies]
+blurmock = { git = "https://github.com/dati91/blurmock.git", optional = true }
